@@ -1,0 +1,109 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+@font-face {
+  font-family: "Norse-Bold";
+  src: url("font/Norse-Bold.otf");
+}
+
+:root {
+  /* So I can use rem */
+  font-size: 62.5%;
+}
+
+body {
+  /* Background of the whole page */
+  background-color: rgb(14, 14, 14);
+  font-size: 1.6rem;
+}
+.content {
+  /* Centrally aligns */
+  margin: auto;
+  /* TODO - Change this so it's 90% up to a certain point and then no more than that size? */
+  max-width: 90vw;
+  display: flex;
+}
+
+.left-img {
+  /* Main text in this part is white */
+  color: white;
+  /* Used to anchor the relatively positioned text */
+  position: absolute;
+
+  /* Curved edges */
+  border-radius: 2rem 0rem 0rem 2rem;
+
+  /* Trying to get the logo-container to stretch. This does nothing? */
+  display: flex;
+  justify-content: stretch;
+
+  /* Temp - placeholder size */
+  width: 430px;
+  height: 800px;
+  background-color: pink;
+}
+
+.odin-logo-container {
+  background-color: rgba(20, 20, 20, 0.5);
+  font-family: "Norse-Bold";
+  font-size: 10rem;
+  /* Used to anchor the div then resize it */
+  position: absolute;
+  top: 17rem;
+
+  /* width: 430px; TODO This works - but trying to use flex to stretch it */
+
+  /* Put on same line and centrally align */
+  display: flex;
+  justify-content: center;
+}
+
+.odin-logo-container img {
+  padding: 15px;
+}
+
+.odin-logo-container span {
+  /* This vertically aligns the text centrally */
+  display: flex;
+  align-self: flex-end;
+}
+
+.photo-credit {
+  /* Positions credit on top of 'photo' */
+  font-size: 1.3rem;
+  position: absolute;
+  bottom: 1rem;
+  /* TODO - Make this more responsive / calculated */
+  left: 13rem;
+}
+
+.photo-credit a {
+  color: white;
+}
+
+.right-content {
+  background-color: grey;
+  display: flex;
+
+  /* Curved - prettier */
+  border-radius: 2rem;
+
+  /* Temp - placeholder size */
+  height: 800px;
+}
+
+.background-image {
+  /* Make the image a fixed aspect ratio */
+  max-width: 430px;
+  aspect-ratio: 0.525;
+}
+
+.create-account {
+  background-color: #596d48;
+}
+
+input {
+  border: 2px #e5e7eb solid;
+}
