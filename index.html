@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-up Form</title>
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -44,24 +44,27 @@
         </div>
         <form class="signup-form">
           <p>Let's do this!</p>
-
           <fieldset>
             <label for="first-name"
-              >FIRST NAME<br /><input
+              >FIRST NAME *<br /><input
                 type="text"
                 name="first-name"
                 id="first-name"
+                minlength="3"
+                required
             /></label>
 
             <label for="last-name"
-              >LAST NAME<br /><input
+              >LAST NAME *<br /><input
                 type="text"
                 name="last-name"
                 id="last-name"
+                minlength="3"
+                required
             /></label>
 
             <label for="email"
-              >EMAIL<br /><input type="email" name="email" id="email"
+              >EMAIL<br /><input type="email" name="email" id="email" required
             /></label>
 
             <label for="phone-number"
@@ -76,6 +79,8 @@
                 type="password"
                 name="password"
                 id="password"
+                minlength="8"
+                required
             /></label>
 
             <label for="confirm-password"
@@ -83,11 +88,11 @@
                 type="password"
                 name="confirm-password"
                 id="confirm-password"
+                minlength="8"
+                required
             /></label>
           </fieldset>
-
           <button class="create-account">Create Account</button>
-
           <p>Already have an account? Log in</p>
         </form>
       </div>

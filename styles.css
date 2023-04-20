@@ -99,7 +99,7 @@ body {
   flex-direction: column;
   justify-content: center;
 
-  flex-grow: 1;
+  /* flex-grow: 1; */
   /* Temp - placeholder size */
   width: 600px;
 }
@@ -107,8 +107,9 @@ body {
 .welcome-message {
   /* display: flex; */
   /* flex-grow: 1; */
-  padding-left: 3vw;
-  padding-right: 7vw;
+  margin-left: 3vw;
+  margin-right: 7vw;
+  margin-bottom: 3vw;
   text-align: justify;
   font-size: 1.5rem;
   font-weight: bolder;
@@ -116,9 +117,10 @@ body {
 
 .signup-form {
   /* background-color: orange; */
-  padding-left: 3vw;
-  padding-right: 7vw;
+  /* padding: 1vw 10vw 1vw 3vw; */
   text-align: justify;
+  background-color: white;
+  margin-bottom: 2rem;
 }
 
 .signup-form fieldset {
@@ -126,6 +128,12 @@ body {
   border: 0px;
   flex-wrap: wrap;
   justify-content: space-between;
+  box-shadow: 0rem 0.4rem 0.4rem rgb(165, 165, 165);
+}
+
+.signup-form fieldset p {
+  color: blue;
+  flex-grow: 1;
 }
 
 .create-account {
@@ -134,14 +142,18 @@ body {
   padding: 1rem 3rem;
   color: white;
   font-weight: bolder;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-left: 3vw;
 }
 
 input {
   border: 2px #e5e7eb solid;
-  padding: 2px;
-  width: 12vw;
+  padding: 0.3rem;
+  width: 14vw;
   font-size: 1.6rem;
   border-radius: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 input:focus {
@@ -151,6 +163,7 @@ input:focus {
 
 input[type="password"]:invalid {
   /* Some JS to activate this */
+  content: "Invalid password";
   border: none;
   outline: 2px solid red;
 }
@@ -159,5 +172,17 @@ label {
   color: #343d4a;
   font-size: 0.9rem;
   font-weight: 200;
-  margin-top: 10px;
+  margin-top: 2rem;
+  flex: 1 0 35%;
+  margin-left: 3vw;
+
+  /* padding-left: 3vw; */
+}
+
+label:nth-child(even) {
+  margin-left: 0;
+}
+
+.signup-form p {
+  margin: 1vw 3vw 0vw 3vw;
 }
