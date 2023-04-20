@@ -24,6 +24,7 @@ body {
 
 .content {
   /* Centrally aligns */
+  display: flex;
   margin: auto auto;
   /* TODO - Change this so it's 90% up to a certain point and then no more than that size? */
   max-width: 90vw;
@@ -35,9 +36,10 @@ body {
 
   /* Temp - placeholder size */
   width: 30vw;
-  max-width: 450px;
+  max-width: 400px;
   height: 60vh;
   background-color: pink;
+  border-radius: 2rem 0rem 0rem 2rem;
 }
 
 .odin-logo-container {
@@ -47,7 +49,7 @@ body {
   font-size: 7vh;
   /* Places it 20% of the way down */
   position: relative;
-  top: 20%;
+  bottom: 80%;
 
   /* Put on same line and centrally align vertically + horizontally*/
   display: flex;
@@ -71,6 +73,7 @@ body {
   bottom: 17%;
   left: 25%;
   z-index: 4;
+  word-wrap: break-word;
 }
 
 .photo-credit a {
@@ -81,8 +84,18 @@ body {
   /* Make the image a fixed aspect ratio */
   display: flex;
   position: relative;
-  top: -14%;
   width: 100%;
   z-index: 1;
-  height: 101%;
+  height: 100%;
+  border-radius: 2rem 0rem 0rem 2rem;
+}
+
+.right-content {
+  background-color: grey;
+  /* Curved - prettier */
+  border-radius: 0rem 2rem 2rem 0rem;
+  flex-grow: 1;
+
+  /* Temp - placeholder size */
+  width: 600px;
 }
